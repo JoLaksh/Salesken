@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function checkPassword(form) {
+password1 = form.password1.value;
+password2 = form.password2.value;
+if (password1 == '')
+alert ("Please enter Password");
+else if (password2 == '')
+alert ("Please enter confirm password");
+else if (password1 != password2) {
+alert ("\nPassword did not match... Please try again!!");
+return false;
+}
+else{
+alert("Successfully registered... \n Now you can login");
+return true;
+}
+}
+function myPasscode(){
+var x=document.getElementById("myInput");
+var y=document.getElementById("hide1");
+var z=document.getElementById("hide2");
+if(x.type==='password'){
+x.type="text";
+y.style.display="block";
+z.style.display="none";
+}
+else{
+x.type="password";
+y.style.display="none";
+z.style.display="block";
+}
+}
+function myPasscode1(){
+var x=document.getElementById("myIp");
+var y=document.getElementById("hid1");
+var z=document.getElementById("hid2");
+if(x.type==='password'){
+x.type="text";
+y.style.display="block";
+z.style.display="none";
+}
+else{
+x.type="password";
+y.style.display="none";
+z.style.display="block";
+}
+}
+</script>
+<title>Register page</title>
+<link rel="stylesheet" href="register_page.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+
+</head>
+<body>
+<form onSubmit = "return checkPassword(this)">
+<div class="form-box">
+<h1 style="color:#ff5252;">Register here!<h1>
+<div class="input-box">
+<i class="fa fa-user-circle"></i>
+<input type="text" name="fname" placeholder="First name" required>
+<hr>
+</div>
+<div class="input-box">
+<i class="fa fa-user-circle"></i>
+<input type="text" name="lname" placeholder="Last name" required>
+<hr>
+</div>
+<div class="input-box">
+<i class="fa fa-user"></i>
+<input type="text" name="uname" placeholder="User name" required>
+<hr>
+</div>
+<div class="input-box">
+<i class="fa fa-envelope"></i>
+<input type="email" name="email" placeholder="Email Id" required>
+<hr>
+</div>
+<div class="input-box">
+<i class="fa fa-key"></i>
+<input type="password" name="password1" placeholder="Password" minlength="8" id="myInput" required>
+<span class="eye" onclick="myPasscode()">
+<i id="hide2" class="fa fa-eye-slash"></i>
+
+</span>
+<hr>
+</div>
+<div class="input-box">
+<i class="fa fa-key"></i>
+<input type="password" name="password2" placeholder="Confirm Password" minlength="8" id="myIp" required>
+<span class="eyes" onclick="myPasscode1()">
+
+<i id="hide2" class="fa fa-eye-slash"></i>
+</span>
+<hr>
+</div>
+<button type="submit" class="login-btn">REGISTER</button>
+</div>
+</form>
+</body>
+</html>

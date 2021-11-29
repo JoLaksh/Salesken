@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login page</title>
+<link rel="stylesheet" href="login_page.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+
+</head>
+<body>
+<form>
+<div class="form-box">
+<h1 style="color:#ff5252;">Login Here!<h1>
+<div class="input-box">
+<i class="fa fa-user"></i>
+<input type="text" placeholder="User name">
+ 
+<hr>
+</div>
+<div class="input-box">
+<i class="fa fa-key"></i>
+<input type="password" placeholder="Password" id="myInput">
+<span class="eye" onclick="myFunction()">
+<i id="hide1" class="fa fa-eye"></i>
+
+</span>
+<hr>
+</div>
+<a href="account_Page.html"> 
+<button type="button"><span></span>LOGIN</button>
+</div>
+</form>
+<script>
+function myFunction(){
+var x=document.getElementById("myInput");
+var y=document.getElementById("hide1");
+var z=document.getElementById("hide2");
+if(x.type==='password'){
+x.type="text";
+y.style.display="block";
+z.style.display="none";
+}
+else{
+x.type="password";
+y.style.display="none";
+z.style.display="block";
+}
+}
+</script>
+</body>
+</html>
